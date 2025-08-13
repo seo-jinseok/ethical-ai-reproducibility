@@ -1,0 +1,63 @@
+# API Configuration for Literature Search
+# This file contains API keys and configuration settings for external services
+
+# CrossRef API Configuration
+crossref:
+  # Email for polite pool (recommended for better rate limits)
+  email: null  # Set your email here or use CROSSREF_EMAIL environment variable
+  # Rate limit: requests per second
+  rate_limit: 1.0
+  # Base URL (usually doesn't need to be changed)
+  base_url: "https://api.crossref.org/works"
+
+# Semantic Scholar API Configuration
+semantic_scholar:
+  # API key (optional but recommended for higher rate limits)
+  api_key: null  # Set your API key here or use SEMANTIC_SCHOLAR_API_KEY environment variable
+  # Rate limit: requests per second
+  rate_limit: 1.0
+  # Base URL (usually doesn't need to be changed)
+  base_url: "https://api.semanticscholar.org/graph/v1/paper/search"
+
+# General Search Configuration
+search:
+  # Default number of results per query
+  default_limit: 20
+  # Maximum number of results per query
+  max_limit: 1000
+  # Default timeout for API requests (seconds)
+  timeout: 30
+  # Retry configuration
+  retry:
+    max_retries: 3
+    backoff_factor: 1.0
+    status_forcelist: [429, 500, 502, 503, 504]
+
+# Output Configuration
+output:
+  # Default output directory for search results
+  results_dir: "data/search_results"
+  # Default filename format for saved results
+  filename_format: "literature_search_{timestamp}.json"
+  # Whether to include timestamp in filenames
+  include_timestamp: true
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: null  # Set to a filename to log to file, null for console only
+
+# Deduplication Configuration
+deduplication:
+  # Similarity threshold for considering papers as duplicates (0.0-1.0)
+  similarity_threshold: 0.85
+  # Fields to use for deduplication comparison
+  comparison_fields:
+    - "title"
+    - "doi"
+    - "authors"
+  # Whether to prefer papers from certain sources
+  source_preference:
+    - "crossref"
+    - "semantic_scholar"

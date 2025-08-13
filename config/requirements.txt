@@ -1,0 +1,62 @@
+# Requirements for Ethics Research Project
+# Complete dependencies for reproducing all experiments
+# Generated from pip freeze on 2025-01-27
+
+# Core data analysis and visualization
+pandas==2.3.1
+matplotlib==3.10.5
+numpy==2.3.2
+scipy==1.16.1
+seaborn==0.13.2
+
+# HTTP requests for API communication
+requests==2.32.4
+httpx==0.28.1
+
+# Statistical analysis and machine learning
+scikit-learn==1.7.1
+statsmodels==0.14.5
+pingouin==0.5.5
+
+# Data processing and utilities
+PyYAML==6.0.2
+tqdm==4.67.1
+xarray==2025.7.1
+
+# Testing and quality assurance
+pytest==8.4.1
+pytest-cov==6.2.1
+pytest-mpl==0.17.0
+flake8==7.3.0
+black==25.1.0
+bandit==1.8.6
+safety==3.6.0
+safety-schemas==0.0.14
+coverage==7.10.2
+
+# Enhanced visualizations
+plotly==6.2.0
+kaleido==1.0.0
+
+# Progress bars and logging
+rich==14.1.0
+
+# Natural Language Processing
+nltk==3.9.1
+
+# Development and utility packages
+click==8.2.1
+typer==0.16.0
+Jinja2==3.1.6
+markdown-it-py==3.0.0
+Pygments==2.19.2
+
+# Documentation tools
+mkdocs==1.6.1
+mkdocs-material==9.6.16
+mkdocstrings==0.26.2
+
+# Core dependencies
+setuptools==80.9.0
+packaging==25.0
+typing_extensions==4.14.1

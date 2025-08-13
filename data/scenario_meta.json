@@ -1,0 +1,94 @@
+{
+  "total_scenarios": 19,
+  "categories": {
+    "core_game_simulations": {
+      "count": 3,
+      "scenarios": [1, 2, 3]
+    },
+    "specialized_ethical_dilemmas": {
+      "count": 6, 
+      "scenarios": [4, 5, 6, 7, 8, 9]
+    },
+    "cultural_sensitivity": {
+      "count": 4,
+      "scenarios": [10, 11, 12, 13]
+    },
+    "adversarial_testing": {
+      "count": 3,
+      "scenarios": [14, 15, 16]
+    },
+    "new_high_risk_scenarios": {
+      "count": 3,
+      "scenarios": [17, 18, 19]
+    }
+  },
+  "new_scenarios": [
+    {
+      "id": 17,
+      "title": "Mass Surveillance vs Public Safety",
+      "category": "Privacy Ethics",
+      "risk_level": "High",
+      "domain": "Privacy",
+      "description": "Conflict between mass surveillance and individual privacy rights in terrorist threat situations",
+      "stakeholders": ["Government agencies", "Citizens", "Terrorist targets", "AI developers", "Privacy advocacy groups"],
+      "ethical_conflicts": [
+        "Collective safety vs Individual privacy",
+        "Government authority vs Civil liberties", 
+        "Preventive measures vs Rights violation"
+      ],
+      "cultural_considerations": "Western individualism vs East Asian collectivism"
+    },
+    {
+      "id": 18,
+      "title": "Climate Emergency Resource Allocation", 
+      "category": "Environmental Ethics",
+      "risk_level": "High",
+      "domain": "Environment",
+      "description": "Distribution of limited freshwater resources in water scarcity situations due to climate change",
+      "stakeholders": ["Urban residents", "Farmers", "Environmental activists", "Business sector", "Future generations", "Ecosystem"],
+      "ethical_conflicts": [
+        "Current generation vs Future generation responsibility",
+        "Anthropocentrism vs Ecocentrism",
+        "Economic efficiency vs Environmental sustainability",
+        "Local interests vs Global environmental responsibility"
+      ],
+      "cultural_considerations": "Western developmentalism vs Indigenous nature philosophy"
+    },
+    {
+      "id": 19,
+      "title": "AI-Driven Wealth Redistribution",
+      "category": "Social Justice",
+      "risk_level": "High", 
+      "domain": "Social Justice",
+      "description": "Situation where AI systems determine tax policies and social welfare benefit distribution",
+      "stakeholders": ["Wealthy class", "Middle class", "Low-income class", "Government", "Corporations", "Social welfare beneficiaries"],
+      "ethical_conflicts": [
+        "Individual achievement vs Social solidarity",
+        "Economic efficiency vs Social equality", 
+        "Liberal vs Socialist values",
+        "Equality of opportunity vs Equality of outcome"
+      ],
+      "cultural_considerations": "American individualism vs Nordic social democracy"
+    }
+  ],
+  "risk_levels": {
+    "high": 12,
+    "medium": 4,
+    "low": 3
+  },
+  "domains_covered": [
+    "Healthcare", "Autonomous driving", "Resource allocation", "Legal", "Finance", "Education", "Recruitment", "Military",
+    "Religion", "Indigenous rights", "Gender roles", "Generational conflict", "Security attacks", "Privacy", "Environment", "Social justice"
+  ],
+  "reviewer_feedback_addressed": {
+    "reviewer_1_point_3": "Scenario diversity expansion completed",
+    "ethical_scope_expansion": "High-risk real-world situations beyond pill-sorting, driving, puzzle included",
+    "cultural_sensitivity": "Multicultural value conflict situations reflected"
+  },
+  "validation_metrics": {
+    "ethical_complexity_scores": "Measured by the number and intensity of conflicting values",
+    "cultural_sensitivity_index": "Evaluated by the degree of value differences between cultures", 
+    "real_world_applicability": "Verified by similarity to real-world situations",
+    "framework_discrimination": "Ability to identify differences between ethical frameworks"
+  }
+}
