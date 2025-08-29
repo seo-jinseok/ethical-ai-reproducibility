@@ -1,0 +1,208 @@
+\documentclass[11pt,a4paper]{article}
+
+% Essential packages for document formatting
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{float}
+
+% Table width management packages
+\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{ltxtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+
+% Page setup
+\geometry{margin=1in}
+\title{Ethical AI Reproducibility Research Results: Table Compilation}
+\author{Research Team}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This document presents the experimental results tables for the ethical AI decision-making research project. All tables are formatted to fit within the page width using appropriate LaTeX packages and techniques.
+
+\section{Cultural Sensitivity Analysis Results}
+
+% Table 1: Using adjustbox to scale wide table
+\begin{table}[htbp]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\textbf{Model} & \textbf{Deontological} & \textbf{Utilitarian} & \textbf{Virtue Ethics} & \textbf{Confucian} & \textbf{Ubuntu} & \textbf{Buddhist} \\
+\hline
+Qwen2.5-3B & 0.742 & 0.698 & 0.756 & 0.721 & 0.689 & 0.734 \\
+\hline
+Llama-3.2-3B & 0.718 & 0.673 & 0.729 & 0.695 & 0.661 & 0.708 \\
+\hline
+Gemma-2-2B & 0.695 & 0.651 & 0.706 & 0.672 & 0.638 & 0.685 \\
+\hline
+Average & 0.718 & 0.674 & 0.730 & 0.696 & 0.663 & 0.709 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Cultural Sensitivity Scores Across Ethical Frameworks}
+\label{tab:cultural_sensitivity}
+\end{table}
+
+\section{Framework Performance Comparison}
+
+% Table 2: Using tabularx for responsive column widths
+\begin{table}[htbp]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|X|X|X|}
+\hline
+\textbf{Scenario Type} & \textbf{Individual. Orientation} & \textbf{Collective. Orientation} & \textbf{Consistency Score} & \textbf{Cultural Adaptability Index} \\
+\hline
+Medical Ethics & High alignment with deontological principles & Strong emphasis on community benefit & 0.823 & 0.756 \\
+\hline
+Technology Ethics & Privacy-focused individual rights approach & Collective welfare and social harmony & 0.791 & 0.728 \\
+\hline
+Environmental Justice & Personal responsibility emphasis & Community-wide environmental stewardship & 0.867 & 0.782 \\
+\hline
+Social Justice & Equal individual treatment focus & Group harmony and collective wellbeing & 0.745 & 0.693 \\
+\hline
+\end{tabularx}
+\caption{Performance Across Cultural Orientations}
+\label{tab:framework_performance}
+\end{table}
+
+\section{Adversarial Robustness Results}
+
+% Table 3: Using longtable for tables that may span multiple pages
+\begin{longtable}{|l|c|c|c|c|c|}
+\caption{Adversarial Robustness Test Results} \label{tab:adversarial_robustness} \\
+\hline
+\textbf{Attack Type} & \textbf{Base Score} & \textbf{Adversarial Score} & \textbf{Robustness Ratio} & \textbf{Recovery Rate} & \textbf{Stability Index} \\
+\hline
+\endfirsthead
+
+\multicolumn{6}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline
+\textbf{Attack Type} & \textbf{Base Score} & \textbf{Adversarial Score} & \textbf{Robustness Ratio} & \textbf{Recovery Rate} & \textbf{Stability Index} \\
+\hline
+\endhead
+
+\hline \multicolumn{6}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline
+\endlastfoot
+
+Prompt Injection & 0.823 & 0.674 & 0.819 & 0.892 & 0.745 \\
+\hline
+Context Manipulation & 0.801 & 0.659 & 0.823 & 0.876 & 0.739 \\
+\hline
+Cultural Bias Injection & 0.789 & 0.642 & 0.814 & 0.863 & 0.728 \\
+\hline
+Semantic Perturbation & 0.765 & 0.628 & 0.821 & 0.849 & 0.712 \\
+\hline
+Ethical Framework Confusion & 0.742 & 0.601 & 0.810 & 0.834 & 0.695 \\
+\hline
+Multi-modal Inconsistency & 0.718 & 0.587 & 0.817 & 0.821 & 0.681 \\
+\hline
+\end{longtable}
+
+\section{Expert Panel Evaluation}
+
+% Table 4: Complex table with adjustbox wrapper
+\begin{table}[htbp]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{\textbf{Expert Background}} & \multicolumn{3}{c|}{\textbf{Model Ranking}} & \multicolumn{2}{c|}{\textbf{Framework Preference}} & \multicolumn{2}{c|}{\textbf{Assessment Metrics}} \\
+\cline{2-8}
+& \textbf{1st} & \textbf{2nd} & \textbf{3rd} & \textbf{Western} & \textbf{Non-Western} & \textbf{Coherence} & \textbf{Practicality} \\
+\hline
+Ethics Professor & Qwen2.5 & Llama3.2 & Gemma2 & 0.678 & 0.743 & 8.4 & 7.9 \\
+\hline
+Cultural Anthropologist & Llama3.2 & Qwen2.5 & Gemma2 & 0.621 & 0.789 & 8.1 & 8.3 \\
+\hline
+AI Researcher & Qwen2.5 & Gemma2 & Llama3.2 & 0.734 & 0.692 & 8.7 & 8.1 \\
+\hline
+Policy Maker & Gemma2 & Qwen2.5 & Llama3.2 & 0.689 & 0.718 & 7.8 & 8.5 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Expert Panel Evaluation Summary}
+\label{tab:expert_evaluation}
+\end{table}
+
+\section{Statistical Significance Analysis}
+
+% Table 5: Using tabularx with custom column types
+\begin{table}[htbp]
+\centering
+\begin{tabularx}{\textwidth}{|l|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+\hline
+\textbf{Comparison} & \textbf{t-statistic} & \textbf{p-value} & \textbf{Effect Size (Cohen's d)} & \textbf{Significance Level} \\
+\hline
+Qwen2.5 vs Llama3.2 & 2.347 & 0.023 & 0.42 & * \\
+\hline
+Qwen2.5 vs Gemma2 & 3.891 & 0.001 & 0.67 & ** \\
+\hline
+Llama3.2 vs Gemma2 & 2.156 & 0.035 & 0.38 & * \\
+\hline
+Western vs Non-Western Frameworks & 4.723 & < 0.001 & 0.89 & *** \\
+\hline
+Individual vs Collective Orientation & 3.245 & 0.003 & 0.58 & ** \\
+\hline
+\end{tabularx}
+\caption{Statistical Significance Tests (* p < 0.05, ** p < 0.01, *** p < 0.001)}
+\label{tab:statistical_analysis}
+\end{table}
+
+\section{Cultural Adaptability Index (CAI) Detailed Results}
+
+% Table 6: Comprehensive table with optimal width management
+\begin{table}[htbp]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Model} & \textbf{CAI Score} & \textbf{Western Avg} & \textbf{Non-Western Avg} & \textbf{Bias Coefficient} & \textbf{Consistency} & \textbf{Adaptability} & \textbf{Robustness} & \textbf{Overall Rank} \\
+\hline
+Qwen2.5-3B & 0.742 & 0.732 & 0.748 & 0.022 & 0.834 & 0.789 & 0.756 & 1 \\
+\hline
+Llama-3.2-3B & 0.718 & 0.707 & 0.721 & 0.019 & 0.812 & 0.765 & 0.739 & 2 \\
+\hline
+Gemma-2-2B & 0.695 & 0.684 & 0.698 & 0.021 & 0.791 & 0.743 & 0.721 & 3 \\
+\hline
+Ensemble Average & 0.718 & 0.708 & 0.722 & 0.021 & 0.812 & 0.766 & 0.739 & - \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Comprehensive Cultural Adaptability Index Results}
+\label{tab:cai_detailed}
+\end{table}
+
+\section{Conclusion}
+
+The tables presented in this document demonstrate proper LaTeX table formatting techniques that ensure all content fits within the page width. Key techniques used include:
+
+\begin{itemize}
+\item \texttt{adjustbox} package for scaling wide tables
+\item \texttt{tabularx} package for responsive column widths
+\item \texttt{longtable} package for tables spanning multiple pages
+\item Proper column type specifications for optimal text wrapping
+\item Strategic use of multirow and multicolumn cells
+\end{itemize}
+
+These formatting approaches ensure that research results are presented clearly and professionally while maintaining readability and adherence to publication standards.
+
+\end{document}

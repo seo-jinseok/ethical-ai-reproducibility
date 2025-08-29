@@ -104,6 +104,17 @@ coverage.xml
 # Documentation builds
 docs/_build/
 
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.bbl
+*.blg
+
 # PyInstaller
 *.manifest
 *.spec
