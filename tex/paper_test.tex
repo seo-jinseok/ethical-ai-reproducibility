@@ -1,0 +1,128 @@
+\documentclass[11pt,a4paper]{article}
+
+% 기본 패키지
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% 테이블 관련 패키지 (수정된 버전)
+\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+
+% 페이지 설정
+\geometry{margin=1in}
+\title{Korean LaTeX Paper with Fixed Tables - Test Version}
+\author{Test Author}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+This is a test version of the Korean paper with properly formatted tables that fit within page width. The table width issues have been resolved using adjustbox, tabularx, and longtable packages.
+
+\section{Test Table 1: Using adjustbox}
+
+% 테이블 1: adjustbox 적용
+\begin{table}[htbp]
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\textbf{Model} & \textbf{Deontological} & \textbf{Utilitarian} & \textbf{Virtue Ethics} & \textbf{Confucian} & \textbf{Ubuntu} & \textbf{Buddhist} \\
+\hline
+Qwen2.5-3B & 0.742 & 0.698 & 0.756 & 0.721 & 0.689 & 0.734 \\
+\hline
+Llama-3.2-3B & 0.718 & 0.673 & 0.729 & 0.695 & 0.661 & 0.708 \\
+\hline
+Gemma-2-2B & 0.695 & 0.651 & 0.706 & 0.672 & 0.638 & 0.685 \\
+\hline
+Average & 0.718 & 0.674 & 0.730 & 0.696 & 0.663 & 0.709 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Cultural Sensitivity Scores - Table fixed with adjustbox}
+\label{tab:cultural_sensitivity}
+\end{table}
+
+\section{Test Table 2: Using tabularx}
+
+% 테이블 2: tabularx 적용
+\begin{table}[htbp]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|X|X|X|}
+\hline
+\textbf{Scenario Type} & \textbf{Individual Orientation} & \textbf{Collective Orientation} & \textbf{Consistency Score} & \textbf{Cultural Adaptability Index} \\
+\hline
+Medical Ethics & High alignment with deontological principles & Strong emphasis on community benefit & 0.823 & 0.756 \\
+\hline
+Technology Ethics & Privacy-focused individual rights approach & Collective welfare and social harmony & 0.791 & 0.728 \\
+\hline
+Environmental Justice & Personal responsibility emphasis & Community-wide environmental stewardship & 0.867 & 0.782 \\
+\hline
+Social Justice & Equal individual treatment focus & Group harmony and collective wellbeing & 0.745 & 0.693 \\
+\hline
+\end{tabularx}
+\caption{Framework Performance - Table fixed with tabularx}
+\label{tab:framework_performance}
+\end{table}
+
+\section{Test Table 3: Using longtable}
+
+% 테이블 3: longtable 적용
+\begin{longtable}{|l|c|c|c|c|c|}
+\caption{Adversarial Robustness Test Results - Fixed with longtable} \label{tab:adversarial_robustness} \\
+\hline
+\textbf{Attack Type} & \textbf{Base Score} & \textbf{Adversarial Score} & \textbf{Robustness Ratio} & \textbf{Recovery Rate} & \textbf{Stability Index} \\
+\hline
+\endfirsthead
+
+\multicolumn{6}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline
+\textbf{Attack Type} & \textbf{Base Score} & \textbf{Adversarial Score} & \textbf{Robustness Ratio} & \textbf{Recovery Rate} & \textbf{Stability Index} \\
+\hline
+\endhead
+
+\hline \multicolumn{6}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline
+\endlastfoot
+
+Prompt Injection & 0.823 & 0.674 & 0.819 & 0.892 & 0.745 \\
+\hline
+Context Manipulation & 0.801 & 0.659 & 0.823 & 0.876 & 0.739 \\
+\hline
+Cultural Bias Injection & 0.789 & 0.642 & 0.814 & 0.863 & 0.728 \\
+\hline
+Semantic Perturbation & 0.765 & 0.628 & 0.821 & 0.849 & 0.712 \\
+\hline
+Ethical Framework Confusion & 0.742 & 0.601 & 0.810 & 0.834 & 0.695 \\
+\hline
+Multi-modal Inconsistency & 0.718 & 0.587 & 0.817 & 0.821 & 0.681 \\
+\hline
+\end{longtable}
+
+\section{Conclusion}
+
+This test document demonstrates that:
+\begin{itemize}
+\item All table width issues have been resolved
+\item Tables now fit properly within page margins
+\item Original content structure is preserved
+\item Three different table formatting approaches are available
+\end{itemize}
+
+The same techniques can be applied to the Korean language version of the paper to maintain both the original text content and properly formatted tables.
+
+\end{document}
